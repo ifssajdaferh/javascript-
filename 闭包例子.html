@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function private() {
+            const arr1 = [1, 2, 3]
+            // 使用return返回值形式实现闭包
+            return {
+                set: function (index, val) {
+                    for (let i = 0; i <= arr1.length; i++) {
+                        if (i === index && index > 0 && index < 4 && val != null) {
+                            arr1[i] = val
+
+                        }
+                    }
+
+                },
+                get: function () {
+                    return arr1
+                }
+            }
+        }
+        // 调用方法的方法 将父级方法传给一个变量 通过变量去调用
+        const c = private()
+        c.set(2, 999)
+        // Console.log()  里面的方法没有如果无返回值，会直接报错的
+        console.log(c.get())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 定义一个类
+        class student {
+            constructor(name,number){
+                this.name=name;
+                this.number=number;
+
+            }
+            sayhi(){
+                console.log(`姓名${this.name},学号${this.number}的学生：hello··`);
+            }
+            study(){
+                console.log("study")
+            }
+        }
+
+        // 通过类生成实例
+        const zxy=new student('张学友',100);
+        zxy.sayhi();
+        zxy.study();
+    </script>
+</body>
+</html>

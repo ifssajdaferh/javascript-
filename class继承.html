@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 父类
+        class people{
+            constructor(name,age,carid){
+               this.name=name;
+               this.age=age;
+               this.carid=carid;
+            }
+            eating(foodname) {
+                console.log(`i 'm eating ${foodname}`)
+
+            }
+        }
+//    子类
+        class student extends people{
+            constructor(name,age,stunumber) {
+               super(name,age);
+               
+               this.stunumber=stunumber;
+            }
+            study(coursename) {
+              console.log(`姓名：${this.name}年龄：${this.age}学号:${this.stunumber}的学生正在学习${coursename}`)
+            }
+        }
+
+        // 父类生成实例 调用
+        const ldh = new people("刘德华",19,41052612138)
+        ldh.eating("香蕉```")
+
+        // 子类生成实例 并且调用
+        const zxc =new student("周星驰",90,201812138)
+        zxc.study("数学");
+
+        console.log("----------------------------------------")
+        console.log(zxc.__proto__)
+    </script>
+</body>
+</html>

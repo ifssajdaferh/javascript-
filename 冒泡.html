@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			var a =[1,9,4,2,7];
+			
+			
+			var sort1 = function(b) {
+				
+				var temp=0;
+				var i =0;
+				for(var j =0;j<b.length-1;j++){
+					
+				 for (i =0;i<b.length;i++) {
+					 
+					if(b[i] > b[i+1]){
+						console.log(i)
+						temp=b[i]
+						b[i]=b[i+1]
+						b[i+1]=temp
+						
+					}
+					
+				}
+				}
+
+				console.log(b);
+				
+			}
+			
+			sort1(a);
+			
+			
+		</script>
+	</body>
+</html>
