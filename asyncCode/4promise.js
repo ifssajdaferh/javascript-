@@ -30,3 +30,34 @@ getimg(url1).then(img=>{
 }).catch(err=>{
     console.log(err)
 })
+
+
+
+// 练习
+
+function getimg (src){
+    const p = new Promise(
+        (resove,reject)=>{
+           const a=doucument.createElement('img')
+           img.onload=()=>{
+               resove(img)
+           }
+
+           img.onerror=()=>{
+               const err=new err(`路径错误${src}`)
+               reject(err)
+           }
+           img.src=src
+        }
+    )
+    return p
+}
+
+const url1="https://img3.sycdn.imooc.com/szimg/5eddd7aa09cfdb1c12000676-360-202.png"
+
+getimg(url1).then(img=>{
+    console.log(img.height)
+    return getimg(url2)
+}).catch(err=>{
+    console.log(err)
+})
